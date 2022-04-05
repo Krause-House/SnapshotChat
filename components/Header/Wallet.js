@@ -144,7 +144,7 @@ export const Wallet = ({ wallet, disconnect, wrongNetwork }) => {
         // </div>
         <>
           {wrongNetwork && (
-            <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
+            <span className="bg-yellow-100 text-yellow-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded-lg dark:bg-yellow-200 dark:text-yellow-900 flex items-center">
               Wrong Network
             </span>
           )}
