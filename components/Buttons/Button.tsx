@@ -1,16 +1,12 @@
 const buttonStyle: any = {
-  blue: `inline-flex max-w-fit py-2 px-3 text-sm cursor-pointer font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`,
-  red: "inline-flex max-w-fit py-2 px-3 text-sm cursor-pointer font-medium text-center text-white bg-red-300 rounded-lg hover:bg-red-400 focus:ring-4 focus:ring-red-300 dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-red-800",
+  blue: "bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
+  red: "bg-red-300 rounded-lg hover:bg-red-400 focus:ring-red-300 dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-red-800",
   purple:
-    "inline-flex max-w-fit py-2 px-3 text-sm cursor-pointer font-medium text-center text-purple-900 bg-purple-300 rounded-lg hover:bg-purple-400 focus:ring-4 focus:ring-purple-300 dark:bg-purple-200 dark:hover:bg-purple-300 dark:focus:ring-purple-200",
-  purpleFull:
-    "inline-flex max-w-full py-2 px-3 text-sm cursor-pointer font-medium text-center text-purple-900 bg-purple-300 rounded-lg hover:bg-purple-400 focus:ring-4 focus:ring-purple-300 dark:bg-purple-200 dark:hover:bg-purple-300 dark:focus:ring-purple-200",
-  orangeFull:
-    "inline-flex max-w-full py-2 px-3 text-sm cursor-pointer font-medium text-center text-orange-900 bg-orange-200 rounded-lg hover:bg-orange-300 focus:ring-4 focus:ring-orange-300 dark:bg-orange-200 dark:hover:bg-orange-300 dark:focus:ring-orange-200",
+    "text-purple-900 bg-purple-300 rounded-lg hover:bg-purple-400 focus:ring-purple-300 dark:bg-purple-200 dark:hover:bg-purple-300 dark:focus:ring-purple-200",
+  orange:
+    "text-orange-900 bg-orange-200 rounded-lg hover:bg-orange-300 focus:ring-orange-300 dark:bg-orange-200 dark:hover:bg-orange-300 dark:focus:ring-orange-200",
   hollow:
-    "inline-flex max-w-fit py-2 px-3 text-sm cursor-pointer font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:z-10 focus:ring-2 focus:ring-purple-700 focus:text-purple-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
-  hollowFull:
-    "inline-flex max-w-full py-2 px-3 text-sm cursor-pointer font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:z-10 focus:ring-2 focus:ring-purple-700 focus:text-purple-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
+    "text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:z-10 focus:ring-2 focus:ring-purple-700 focus:text-purple-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
 };
 
 interface Props {
@@ -20,6 +16,7 @@ interface Props {
   color?: string;
   icon?: boolean;
   newTab?: boolean;
+  className?: string;
 }
 
 export const Button = ({
@@ -29,11 +26,12 @@ export const Button = ({
   icon = false,
   color = "blue",
   newTab = false,
+  className = "",
 }: Props) => (
   <a
     onClick={onClick}
     href={href}
-    className={buttonStyle[color]}
+    className={`inline-flex py-2 px-3 text-sm cursor-pointer font-medium text-center text-white focus:ring-4 ${buttonStyle[color]} ${className}`}
     target={newTab ? "_blank" : undefined}
     rel="noreferrer"
   >

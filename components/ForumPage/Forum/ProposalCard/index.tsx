@@ -59,7 +59,8 @@ export default function ProposalCard({
           <Button
             title="View on Snapshot"
             icon={true}
-            color="hollowFull"
+            color="hollow"
+            className="max-w-full"
             href={`https://snapshot.org/#/krausehouse.eth/proposal/${proposal.id}`}
             newTab={true}
           />

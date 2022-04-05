@@ -19,7 +19,12 @@ export function ViewOnlyModal() {
 
   return (
     <>
-      <Button title="View Only Mode" color="orangeFull" onClick={openModal} />
+      <Button
+        title="View Only Mode"
+        color="orange"
+        className="max-w-full"
+        onClick={openModal}
+      />
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
@@ -131,7 +136,8 @@ export const Wallet = ({ wallet, disconnect, wrongNetwork }) => {
       {wallet.hodler ? (
         <Button
           title={`${wallet?.$KRAUSE?.toFixed(0) || 0} $KRAUSE`}
-          color="hollowFull"
+          color="hollow"
+          className="max-w-full"
         />
       ) : (
         // <div>
@@ -155,7 +161,8 @@ export const Wallet = ({ wallet, disconnect, wrongNetwork }) => {
         <>
           <Button
             title={shortenAddress(wallet.address)}
-            color="hollowFull"
+            color="hollow"
+            className="max-w-full"
             href="/profile"
             newTab={true}
           />
