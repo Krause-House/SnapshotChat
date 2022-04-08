@@ -143,11 +143,7 @@ export const Wallet = ({ wallet, disconnect, wrongNetwork }) => {
         //   </span> */}
         // </div>
         <>
-          {wrongNetwork && (
-            <span className="bg-yellow-100 text-yellow-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded-lg dark:bg-yellow-200 dark:text-yellow-900 flex items-center">
-              Wrong Network
-            </span>
-          )}
+          {wrongNetwork && <Button title="Wrong Network" color="yellowFull" />}
           <ViewOnlyModal />
         </>
       )}
@@ -162,7 +158,7 @@ export const Wallet = ({ wallet, disconnect, wrongNetwork }) => {
           <Button
             title="Disconnect"
             onClick={() => disconnect()}
-            color="hollow"
+            color="hollowFull"
           />
         </>
       )}
