@@ -41,13 +41,11 @@ export const ProposalListItem = ({
     false
   );
 
-  const live =
-    "flex flex-col space-y-10 p-6 bg-white rounded-lg border border-gray-200 shadow-md shadow-purple-700 dark:bg-gray-800 dark:border-gray-700";
-  const standard =
-    "flex flex-col space-y-10 p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700";
-
   return (
-    <div key={key} className={proposal.state === "active" ? live : standard}>
+    <div
+      key={key}
+      className="flex flex-col space-y-10 p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+    >
       <div>
         <Row className="mb-2 pb-2">
           <ProposalStateBadge state={proposal.state} />
