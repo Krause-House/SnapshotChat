@@ -1,6 +1,8 @@
 const buttonStyle: any = {
   blue: "bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
   red: "bg-red-300 rounded-lg hover:bg-red-400 focus:ring-red-300 dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-red-800",
+  yellow:
+    "text-yellow-900 bg-yellow-200 rounded-lg hover:bg-yellow-400 focus:ring-4 focus:ring-yellow-300 dark:bg-yellow-400 dark:hover:bg-yellow-500 dark:focus:ring-yellow-800",
   purple:
     "text-purple-900 bg-purple-300 rounded-lg hover:bg-purple-400 focus:ring-purple-300 dark:bg-purple-200 dark:hover:bg-purple-300 dark:focus:ring-purple-200",
   orange:
