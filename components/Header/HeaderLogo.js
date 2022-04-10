@@ -10,7 +10,7 @@ export const HeaderLogo = () => (
       width={150}
       height={50}
       alt="KH_LOGO"
-      className="hover:opacity-75"
+      className="hover:opacity-75 cursor-pointer"
     />
   </Link>
 );
